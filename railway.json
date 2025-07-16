@@ -1,0 +1,10 @@
+{
+  "build": {
+    "env": {
+      "PGHOST": "postgres.railway.internal",
+      "PGUSER": "railway",
+      "PGDATABASE": "railway",
+      "PGPASSWORD": "your-password-here"
+    }
+  }
+}
