@@ -1,2 +1,7 @@
-# Dockerfile
-FROM ghcr.io/flaresolverr/flaresolverr:latest
+FROM postgres:14
+
+# Set working directory
+WORKDIR /app
+
+# Run dump on container start
+CMD ["sh", "-c", "pg_dump -h $PGHOST -U $PGUSER -d $PGDATABASE -F c -f backup.dump"]
